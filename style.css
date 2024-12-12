@@ -1,0 +1,335 @@
+:root {
+    --black-color: #17202A;
+    --gray-color: #17202A;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+    background-color: #eee;
+    color: var(--black-color);
+}
+
+* {
+    box-sizing : border-box;
+}
+
+#main {
+    max-width: 430px;
+    display: flex;
+    flex-direction: column;
+}
+
+section {
+    background-color: #fff;
+    padding: 0 30px;
+    margin-bottom: 16px;
+}
+
+section:first-of-type {
+    padding: 0;
+}
+
+.top {
+    /* --_mesh-gradient-blur: 0px;
+    --_mesh-gradient-blend-mode: normal;
+
+    background: radial-gradient(at 33% 4%, #d9a1ae 0px, transparent 50%), radial-gradient(at 51% 22%, #d9b0a1 0px, transparent 50%), radial-gradient(at 98% 98%, #d9cca1 0px, transparent 50%), radial-gradient(at 16% 79%, #a1d9cc 0px, transparent 50%), radial-gradient(at 19% 14%, #a1aed9 0px, transparent 50%) #ffffff;
+    mix-blend-mode: var(--_mesh-gradient-blend-mode);
+    filter: blur(var(--_mesh-gradient-blur)); */
+
+    background: url(sources/gradient-bg.jpg) no-repeat center / cover;
+
+    padding: 64px 0 43px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.top .profile {
+    background: url(sources/profile.jpg) no-repeat top -16px right -44px / 180%;
+    aspect-ratio: 1 / 1;
+    width: 120px;
+    border-radius: 50%;
+    border: 1px solid rgba(255, 255, 255, .26);
+    margin: 0 auto 24px;
+}
+
+.top h1 {
+    font-size: 2.6rem;
+    font-weight: 700;
+    letter-spacing: .02rem;
+    line-height: 3rem;
+    margin-bottom: 8px;
+}
+
+.top h3 {
+    font-size: 1.6rem;
+    font-weight: 500;
+    letter-spacing: .01rem;
+    color: var(--gray-color);
+    margin-bottom: 24px;
+}
+
+.top .keyword {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.top .keyword div {
+    padding: 8px 12px;
+    border-radius: 4px;
+    background-color: rgba(255, 255, 255, .36);
+    font-size: 1.2rem;
+    font-weight: 400;
+    color: var(--gray-color);
+}
+
+.intro {
+    padding: 26px 30px;
+    font-size: 1.6rem;
+    line-height: 1.5;
+    word-break: keep-all;
+}
+
+.intro span {
+    font-weight: 700;
+}
+
+section.info {
+    position: relative;
+}
+
+section.info a {
+    padding: 16px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-decoration: none;
+}
+
+section.info .devide {
+    background-color: #eee;
+    height: 1px;
+    width: 100%;
+    position: absolute;
+    left: 0;
+}
+
+section.info a .icon__area {
+    width: 24px;
+    height: 24px;
+}
+
+section.info a .icon__area.phone {
+    background: url(sources/icon-phone.svg) no-repeat center / cover;
+}
+
+section.info a .icon__area.email {
+    background: url(sources/icon-email.svg) no-repeat center / cover;
+}
+
+section.info a .icon__area.insta {
+    background: url(sources/icon-instagram.png) no-repeat center / cover;
+}
+
+.txt__area span {
+    font-size: 1.2rem;
+    color: #ABB2B9;
+    font-weight: 400;
+    display: block;
+}
+
+.txt__area p {
+    font-size: 1.8rem;
+    margin-top: 4px;
+    font-weight: 500;
+    color: var(--black-color);
+}
+
+section h2 {
+    font-size: 2rem;
+    line-height: 2.4rem;
+    font-weight: 700;
+    margin-bottom: 14px;
+    margin-top: 24px;
+}
+
+.box__wrap {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    margin-bottom: 24px;
+    column-gap: 8px;
+    row-gap: 12px;
+}
+
+.box__wrap .img__area {
+    aspect-ratio: 1 / 1;
+    margin-bottom: 10px;
+    border-radius: 8px;
+}
+
+.box__wrap .b-01 .img__area {
+    background: url(sources/img-s-01.jpg) no-repeat center / cover;
+}
+.box__wrap .b-02 .img__area {
+    background: url(sources/img-s-02.jpg) no-repeat center / cover;
+}
+.box__wrap .b-03 .img__area {
+    background: url(sources/img-s-03.jpg) no-repeat center / cover;
+}
+.box__wrap .b-04 .img__area {
+    background: url(sources/img-s-04.jpg) no-repeat center / cover;
+}
+.box__wrap .b-05 .img__area {
+    background: url(sources/img-s-05.jpg) no-repeat center / cover;
+}
+.box__wrap .b-06 .img__area {
+    background: url(sources/img-s-06.jpg) no-repeat center / cover;
+}
+
+.box p {
+    font-size: 1.4rem;
+    font-weight: 400;
+}
+
+/* 모달 영역 */
+.modal {
+    /*팝업 배경*/
+    display: none; 
+    position: fixed;
+    top:0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    background: rgba(0,0,0,0.5);
+    z-index: 300;
+}
+.modal .modal_popup {
+/*팝업*/
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    max-width: 600px;
+    height: 100%;
+    /* max-height: 600px; */
+    overflow: hidden;
+    z-index: 300;
+}
+
+.video__area {
+    width: 100%;
+    height: 208px;
+    border-radius: 8px;
+    overflow: hidden;
+    margin-bottom: 24px;
+    position: relative;
+}
+
+.video__area .overlay {
+    background-color: rgba(0, 0, 0, .36);
+    height: 100%;
+    width: 100%;    
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 100;
+}
+
+.video__area .btn__play {
+    width: 44px;
+    height: 44px;
+    background: url(sources/circle-play-solid.svg) no-repeat center / cover;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 200;
+}
+
+.video__area video {
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+}
+
+section:last-of-type {
+    padding: 0 !important;
+    margin-bottom: 0;
+}
+
+.address {
+    padding: 24px 30px 24px;
+}
+
+.address span {
+    font-size: 1.2rem;
+    color: #A2A2A2;
+    margin-bottom: 4px;
+    display: block;
+    font-weight: 400;
+}
+
+.address p {
+    font-size: 1.8rem;
+    color: var(--black-color);
+    font-weight: 500;
+}
+
+.icon__area.copy {
+    background: url(sources/icon-copy.svg);
+    width: 16px;
+    height: 16px;
+    float: right;
+    transform: translate(-16px, -16px);
+}
+
+footer {
+    background-color: #F3F3F3;
+    padding: 24px 30px;
+}
+
+footer .contents {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+footer .link {
+    display: flex;
+    flex-direction: row;
+}
+
+footer .link a {
+    font-size: 1.6rem;
+    color: #A2A2A2;
+    margin: 0 16px 14px 0;
+    display: block;
+}
+
+footer .copyright {
+    font-size: 1.4rem;
+    color: #A2A2A2;
+}
+
+footer .logo.howd path {
+    fill: #A2A2A2;
+}
+
+@media screen and (min-width:768px) {
+    #main {
+        margin: 0 auto;
+    }
+}
