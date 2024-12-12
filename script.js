@@ -54,3 +54,15 @@ const copyContent = async () => {
     console.error('Failed to copy: ', err);
   }
 }
+
+// 복사완료 알림
+let clickArea = document.querySelector(".click__area");
+
+let animate = function() {
+  clickArea.classList.toggle('animate');
+  setTimeout(function(){
+    clickArea.classList.toggle('animate');
+  },1000);
+}
+
+clickArea.addEventListener('click', animate);

@@ -287,6 +287,46 @@ section:last-of-type {
     font-weight: 500;
 }
 
+.address .click__area {
+    position: relative;
+}
+
+.address .click__area::after {
+    content: "복사완료!";
+    position: absolute;
+    bottom: 140%;
+    left: 50%;
+    transform: translatex(-50%);
+    background-color: var(--gray-color);
+    opacity: 0;
+    display: block;
+    padding: 10px 10px;
+    border-radius: 50px;
+    color: #ffffff;
+    white-space: nowrap;
+    font-size: 1.2rem;
+}
+.click__area.animate::after {
+    animation: complete-copy ease-out 1s backwards;
+}
+  
+@keyframes complete-copy {
+    0% {
+    bottom: 100%;
+    opacity: 0;
+    }
+    50% {
+    bottom: 140%;
+    opacity: 1;
+    }
+    90% {
+    opacity: 1;
+    }
+    100% {
+    opacity: 0;
+    }
+}
+
 .icon__area.copy {
     background: url(sources/icon-copy.svg);
     width: 16px;
