@@ -17,17 +17,19 @@ for(i=0; i<thumbnail.length; i++) {
   })
 }
 
-// 비디오 클릭 시 재생
+// 비디오 클릭 시 재생 및 컨트롤롤
 const video = document.querySelector('.video__area video');
 const videoArea = document.querySelector('.video__area');
 
 function togglePlay() {
     if(video.paused) { // playing이라는 property는 없다. 'paused'만 있음.
         video.play();
+        video.setAttribute('controls',true);
         document.querySelector('.video__area .btn__play').style.display = "none";
         document.querySelector('.video__area .overlay').style.display = "none";
     } else {
         video.pause();
+        video.removeAttribute('controls',true);
         document.querySelector('.video__area .btn__play').style.display = "block";
         document.querySelector('.video__area .overlay').style.display = "block";
     }
